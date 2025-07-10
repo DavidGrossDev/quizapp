@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 button {
@@ -12,13 +13,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
+    background-color: lightgray;
 }
 
 section {
     height: 700px;
     width: 1000px;
-    background-color: lightgray;
 }
 
 .quiz_card {
@@ -70,7 +71,7 @@ nav>button {
 }
 
 .content_main {
-    background-color: rgb(255, 242, 225);
+    background-color: rgba(255, 255, 255, 0.219);
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -127,4 +128,62 @@ nav>button {
     justify-content: space-between;
     padding-left: 40px;
     padding-right: 40px;
+}
+
+.content_main_finish {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 242, 225);
+    clip-path: circle(43%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.clr_blck {
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+}
+
+.clr_blue {
+    font-size: 32px;
+    font-weight: bold;
+    color: blue;
+}
+
+.content_main_finish_head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    
+}
+
+.content_main_finish_score {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.content_main_finish_buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.content_main_finish_buttons>button {
+    width: 280px;
+    height: 64px;
+    border-radius: 16px;
+    font-size: 24px;
+    color: orangered;
+}
+
+.content_main_finish_buttons>button:hover {
+    background-color: orangered;
+    color: white;
 }
