@@ -12,44 +12,60 @@
 <body onload="init()">
     <section>
         <div class="quiz_card">
-                <div class="sidebar">
-                    <img class="sidebar_img" src="./assets/img/logo.png" alt="">
-                    <nav>
-                        <button class="chose_theme">HTML</button>
-                        <button class="chose_theme">CSS</button>
-                        <button class="chose_theme">JS</button>
-                        <button class="chose_theme">Java</button>
-                    </nav>
+            <div class="sidebar">
+                <img class="sidebar_img" src="./assets/img/logo.png" alt="">
+                <nav>
+                    <button class="chose_theme">HTML</button>
+                    <button class="chose_theme">CSS</button>
+                    <button class="chose_theme">JS</button>
+                    <button class="chose_theme">Java</button>
+                </nav>
+            </div>
+
+            <div class="content_main_finish" id="endscreen" style="display: none;">
+                <div class="content_main_finish_head">
+                    <img class="finish_img" src="./assets/img/brainresult.png" alt="">
+                    <span class="clr_blck">COMPLETE<br> HTML QUIZ</span>
                 </div>
-                <div class="content_main" id="display_content">
-                    <div class="content_head">
-                        <h1 id="question_text">Wer hat HTML erfunden?</h1>
-                    </div>
-                    <div class="content_choises">
-                        <div class="choise_item quiz_answer_card" onclick="answer('answer_1')">
-                            <div class="differ">A</div>
-                            <div class="answer_item" id="answer_1">Answer 1</div>
-                        </div>
-                        <div class="choise_item quiz_answer_card" onclick="answer('answer_2')">
-                            <div class="differ">B</div>
-                            <div class="answer_item" id="answer_2">Answer 2</div>
-                        </div>
-                        <div class="choise_item quiz_answer_card" onclick="answer('answer_3')">
-                            <div class="differ">C</div>
-                            <div class="answer_item" id="answer_3">Answer 3</div>
-                        </div>
-                        <div class="choise_item quiz_answer_card" onclick="answer('answer_4')">
-                            <div class="differ">D</div>
-                            <div class="answer_item" id="answer_4">Answer 4</div>
-                        </div>
-                    </div>
-                    <div class="question_footer">
-                        <button>BACK</button>
-                        <p><b id="current_question">4</b> von <b id="all_questions">5</b> Fragen</p>
-                        <button disabled id="next_button" onclick="nextQuestion()">FORWARD</button>
-                    </div>
+                <div class="content_main_finish_score">
+                    <span class="clr_blue">YOUR SCORE</span>
+                    <p class="clr_blck" id="count_result">10/10</p>
+                </div>
+                <div class="content_main_finish_buttons">
+                    <button>SHARE</button>
+                    <button onclick="location.reload()">REPLAY</button>
                 </div>
             </div>
+
+            <div class="content_main" id="question_body">
+                <div class="content_head">
+                    <h1 id="question_text">Wer hat HTML erfunden?</h1>
+                </div>
+                <div class="content_choises">
+                    <div class="choise_item quiz_answer_card" onclick="answer('answer_1')">
+                        <div class="differ">A</div>
+                        <div class="answer_item" id="answer_1">Answer 1</div>
+                    </div>
+                    <div class="choise_item quiz_answer_card" onclick="answer('answer_2')">
+                        <div class="differ">B</div>
+                        <div class="answer_item" id="answer_2">Answer 2</div>
+                    </div>
+                    <div class="choise_item quiz_answer_card" onclick="answer('answer_3')">
+                        <div class="differ">C</div>
+                        <div class="answer_item" id="answer_3">Answer 3</div>
+                    </div>
+                    <div class="choise_item quiz_answer_card" onclick="answer('answer_4')">
+                        <div class="differ">D</div>
+                        <div class="answer_item" id="answer_4">Answer 4</div>
+                    </div>
+                </div>
+                <div class="question_footer">
+                    <button>BACK</button>
+                    <p><b id="current_question">4</b> von <b id="all_questions">5</b> Fragen</p>
+                    <button disabled id="next_button" onclick="nextQuestion()">FORWARD</button>
+                </div>
+            </div>
+        </div>
     </section>
     <script src="./scritps/questions.js"></script>
     <script src="./script.js"></script>
