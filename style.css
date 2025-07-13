@@ -25,6 +25,7 @@ section {
 .quiz_card {
     display: flex;
     justify-content: space-between;
+    background-color: lightgray;
 }
 
 .sidebar {
@@ -133,7 +134,6 @@ nav>button {
 
 .content_main_finish {
     flex: 1;
-    height: 100%;
     width: 100%;
     background-color: rgb(255, 242, 225);
     clip-path: circle(43%);
