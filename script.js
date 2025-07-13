@@ -6,9 +6,10 @@ function init() {
 }
 
 function showQuestion() {
-
     if (currentQuestion >= questions.length) {
-        showEndscreen(counterRightAnswers);
+        document.getElementById('endscreen').style = '';
+        document.getElementById('question_body').style = 'display: none';
+        document.getElementById('count_result').innerHTML = `${counterRightAnswers}/${questions.length}`;
     } else {
         let question = questions[currentQuestion];
 
@@ -51,20 +52,3 @@ function answer(selection) {
     document.getElementById('next_button').disabled = false;
 }
 
-function showEndscreen(counterRightAnswers) {
-    document.getElementById('display_content').innerHTML =
-        `<div class="content_main_finish">
-            <div class="content_main_finish_head">
-                <img class="finish_img" src="./assets/img/brainresult.png" alt="">
-                <span class="clr_blck">COMPLETE<br> HTML QUIZ</span>
-            </div>
-            <div class="content_main_finish_score">
-                            <span class="clr_blue">YOUR SCORE</span>
-                            <p class="clr_blck">${counterRightAnswers}/10</p>
-            </div>
-            <div class="content_main_finish_buttons">
-                <button>SHARE</button>
-                <button>REPLAY</button>
-            </div>
-        </div>`
-}
