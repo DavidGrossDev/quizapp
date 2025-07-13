@@ -71,7 +71,7 @@ nav>button {
 }
 
 .content_main {
-    background-color: lightgray;
+    background-color: rgb(226, 226, 226);
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -98,10 +98,11 @@ nav>button {
 .choise_item {
     width: 60%;
     height: 80px;
-    background-color: white;
+    background-color: rgba(255,255,255,1);
     display: flex;
     align-items: center;
     padding: 8px;
+    border-radius: 10px;
 }
 
 .differ {
@@ -199,4 +200,25 @@ nav>button {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.quiz_answer_card:hover {
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.05);
+}
+
+.correct_answer {
+    background-color: rgba(0,255,0,0.6);
+}
+
+.wrong_answer {
+    background-color: rgba(255,0,0,0.6);
+}
+
+.correct_answer:hover {
+    background-color: rgba(0,255,0,0.55);
+}
+
+.wrong_answer:hover {
+    background-color: rgba(255,0,0,0.55);
 }
