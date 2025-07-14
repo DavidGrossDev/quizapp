@@ -10,6 +10,11 @@
 </head>
 
 <body onload="init()">
+    <div class="progress">
+            <div class="progressbar" id="progress_bar" style="width: 0%;">
+                
+            </div>
+        </div>
     <section>
         <div class="quiz_card">
             <div class="sidebar">
@@ -33,7 +38,7 @@
                 </div>
                 <div class="content_main_finish_buttons">
                     <button>SHARE</button>
-                    <button onclick="location.reload()">REPLAY</button>
+                    <button onclick="restartGame()">REPLAY</button>
                 </div>
             </div>
 
