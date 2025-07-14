@@ -17,12 +17,9 @@ body {
     background-color: rgb(221, 223, 226);
 }
 
-section {
+.quiz_card {
     height: 700px;
     width: 1000px;
-}
-
-.quiz_card {
     display: flex;
     justify-content: space-between;
     background-color: lightgray;
@@ -161,7 +158,7 @@ nav>button {
     flex-direction: column;
     align-items: center;
     gap: 32px;
-    
+
 }
 
 .content_main_finish_score {
@@ -204,23 +201,23 @@ nav>button {
 
 .quiz_answer_card:hover {
     cursor: pointer;
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .correct_answer {
-    background-color: rgba(0,255,0,0.6);
+    background-color: rgba(0, 255, 0, 0.6);
 }
 
 .wrong_answer {
-    background-color: rgba(255,0,0,0.6);
+    background-color: rgba(255, 0, 0, 0.6);
 }
 
 .correct_answer:hover {
-    background-color: rgba(0,255,0,0.55);
+    background-color: rgba(0, 255, 0, 0.55);
 }
 
 .wrong_answer:hover {
-    background-color: rgba(255,0,0,0.55);
+    background-color: rgba(255, 0, 0, 0.55);
 }
 
 .progress {
@@ -237,4 +234,68 @@ nav>button {
     height: 100%;
     border-radius: 0 8px 8px 0;
     transition: 0.5s ease-in-out;
+}
+
+@media (max-width:1050px) {
+    .quiz_card {
+        width: 800px;
+    }
+
+    .content_main_finish {
+        clip-path: circle(46%);
+    }
+
+    .content_main_finish_buttons>button {
+        width: 200px;
+    }
+
+    .content_head {
+        padding: 8px;
+    }
+
+    .question_text {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .quiz_card {
+        flex-direction: column;
+        height: 90vh;
+        width: 90%;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 185px;
+    }
+
+    .sidebar_img {
+        margin: 24px 0;
+    }
+
+    .chose_theme {
+        justify-content: center;
+        border-left: 0;
+        border-bottom: 6px solid rgba(255, 255, 255, 0);
+        padding: 9px 0;
+        width: 100px;
+    }
+
+    nav {
+        flex-direction: row;
+        margin-bottom: 16px;
+    }
+
+    .chose_theme:hover {
+        border: 0;
+        border-bottom: 6px solid white;
+    }
+}
+
+@media (max-width: 650px) {
+    .content_choises {
+        min-height: 366px;
+    }
 }
