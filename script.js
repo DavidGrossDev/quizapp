@@ -39,7 +39,7 @@ function showNextQuestion() {
 
 function nextQuestion() {
     currentQuestion++
-    document.getElementById('next_button').disabled = true;
+    disableNextButton();
     resetAnswerButtons();
     showQuestion();
 }
@@ -80,6 +80,10 @@ function wrongAnswerSelected(selection, idRightAnswer) {
 
 function enableNextButton() {
     document.getElementById('next_button').disabled = false;
+}
+
+function disableNextButton() {
+    document.getElementById('next_button').disabled = true;
 }
 
 function progressBar() {
